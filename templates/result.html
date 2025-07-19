@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f7f9fc;
+            margin: 0;
+            padding-bottom: 120px;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        .result-box {
+            background-color: #fff;
+            padding: 30px;
+            margin: 30px auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+        }
+
+        .result-box img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+        }
+
+    
+        .btn-try-again {
+            margin-top: 20px;
+            padding: 10px 25px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-try-again:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Prediction Result</h1>
+        <div class="result-box">
+            <h2>Predicted Species:</h2>
+            <p style="font-size: 24px; color: #27ae60;"><strong>{{ prediction }}</strong></p>
+            <img src="{{ image_path }}" alt="Uploaded Image">
+            <br>
+            <a href="/" class="btn-try-again">Try Another Image</a>
+        </div>
+    </div>
+
+</body>
+</html>
